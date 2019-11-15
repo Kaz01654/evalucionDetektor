@@ -2,7 +2,7 @@
 
 1 - Descarga el proyecto.
 
-2 - Entra en el directorio del proyecto: cd evaluacionAngular
+2 - Entra en el directorio del proyecto: `cd evaluacionAngular`
 
 3 - Instala las dependencias: npm install
 
