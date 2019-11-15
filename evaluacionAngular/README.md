@@ -4,11 +4,11 @@
 
 2 - Entra en el directorio del proyecto: `cd evaluacionAngular`
 
-3 - Instala las dependencias: npm install
+3 - Instala las dependencias: `npm install`
 
-4 - Corre servidor de node: node server
+4 - Corre servidor de node: `node server`
 
-5 - Corre servidor para ver la aplicacion http://localhost:4200/ : ng serve
+5 - Corre servidor para ver la aplicacion http://localhost:4200/ : `ng serve`
 
 
 # EvaluacionAngular
