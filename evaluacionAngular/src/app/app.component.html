@@ -1,0 +1,55 @@
+<div class="col-md-12 user-container">
+  <h2> Evaluación Práctica Detektor</h2>
+  <table datatable class="table table-striped table-bordered" *ngIf="this.temp">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Motivo</th>
+        <th>Estado</th>
+        <th>Tipo</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of itemData">
+        <td>{{item.motivo}}</td>
+        <td>{{item.des_motivo}}</td>
+        <td>{{item.estado}}</td>
+        <td>{{item.tipo}}</td>
+        <td><button class="btn btn-outline-danger" (click)="deleteItem(item)"> Delete</button>
+          <button class="btn btn-outline-primary" (click)="cambiarEditar()" (click)="openForEdit(item)" (click)="open(mymodal)" style="margin-left: 20px;"> Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-lg btn-outline-success" (click)="cambiarAgregar()" (click)="open(mymodal)">Agregar</button>
+</div>
+
+<ng-template #mymodal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{ modalTitle }}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+        <input type="hidden" [(ngModel)]="selectedItems.motivo" name="motivo">
+      <div class="form-group">
+        <label for="motivo" class="control-label">Motivo:</label>
+        <input [(ngModel)]="selectedItems.des_motivo" type="text" class="form-control" name="des_motivo"/>
+      </div>
+      <div class="form-group">
+        <label for="estado" class="control-label">Estado:</label>
+        <input [(ngModel)]="selectedItems.estado" type="text" class="form-control" name="estado"/>
+      </div>
+      <div class="form-group">
+        <label for="tipo" class="control-label">Tipo:</label>
+        <input [(ngModel)]="selectedItems.tipo" type="text" class="form-control" name="tipo"/>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" id="btnModal" class="btn btn-outline-dark" style="width:100px" (click)="addItem()" (click)="modal.close('Save click')"> {{ btnTitle }}</button>
+  </div>
+</ng-template>
+    
