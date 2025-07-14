@@ -27,7 +27,7 @@
     "datatables.net-dt": "^1.10.20",
     "express": "^4.17.1",
     "jquery": "^3.4.1",
-    "nodemon": "^1.19.4",
+    "nodemon": "^2.0.0",
     "pg": "^7.12.1",
     "popper.js": "^1.16.0",
     "rxjs": "~6.4.0",
